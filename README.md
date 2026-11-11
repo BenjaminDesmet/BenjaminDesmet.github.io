@@ -1,2 +1,2 @@
 # BenjaminDesmet.github.io
-Website about my trip to USA
+Portfolio van Benjamin Desmet, student Graduaat Programmeren (Howest). De vroegere reiswebsite staat in /reis.

@@ -1,59 +1,264 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Benjamin Desmet</title>
+    <title>Benjamin Desmet · .NET developer in opleiding</title>
+    <meta name="description" content="Portfolio van Benjamin Desmet, student Graduaat Programmeren aan Howest: C#, .NET, ASP.NET Core, Blazor, .NET MAUI en meer.">
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-    <header>
-        <h1>Zomerreis naar California</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="pages/programma.html">Reisprogramma</a></li>
-                <li><a href="pages/verblijven.html">Verblijven</a></li>
+
+<header class="topbar">
+    <a href="#top" class="logo">BD<span>.</span></a>
+    <nav>
+        <a href="#skills">Skills</a>
+        <a href="#projecten">Projecten</a>
+        <a href="#opleiding">Opleiding</a>
+        <a href="#werkwijze">Werkwijze</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+        <p class="eyebrow">// Graduaat Programmeren · Howest · 2023 – 2026</p>
+        <h1>Hallo, ik ben <span class="accent">Benjamin Desmet</span>.</h1>
+        <p class="lead">
+            Ik bouw software met <strong>C# en .NET</strong>: van web-API's en Blazor-apps tot
+            mobiele apps in .NET MAUI en een eigen koppeling tussen mijn domoticasysteem en Home Assistant.
+            Op deze pagina vind je wat ik tijdens mijn opleiding geleerd en gemaakt heb.
+        </p>
+        <div class="hero-actions">
+            <a class="btn primary" href="#projecten">Bekijk mijn projecten</a>
+            <a class="btn" href="https://github.com/BenjaminDesmet" target="_blank" rel="noopener">GitHub</a>
+        </div>
+        <ul class="stats">
+            <li><strong>3</strong><span>opleidingsjaren</span></li>
+            <li><strong>15+</strong><span>vakken</span></li>
+            <li><strong>6</strong><span>uitgelichte projecten</span></li>
+            <li><strong>2</strong><span>Scrum-teamprojecten</span></li>
+        </ul>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+        <h2><span class="num">01</span> Wat ik kan</h2>
+        <div class="skill-grid">
+            <article class="skill-card">
+                <h3>Back-end</h3>
+                <ul class="tags">
+                    <li>C#</li><li>.NET 8 / 9</li><li>ASP.NET Core MVC</li><li>Web API</li>
+                    <li>Entity Framework Core</li><li>LINQ</li><li>Generics</li><li>Delegates &amp; lambdas</li>
+                    <li>Service pattern</li><li>Dependency injection</li>
+                </ul>
+            </article>
+            <article class="skill-card">
+                <h3>Front-end</h3>
+                <ul class="tags">
+                    <li>HTML5</li><li>CSS3</li><li>Flexbox</li><li>JavaScript</li>
+                    <li>JSON &amp; fetch</li><li>Razor</li><li>Blazor Server</li><li>Blazor WebAssembly</li><li>MudBlazor</li>
+                </ul>
+            </article>
+            <article class="skill-card">
+                <h3>Mobile</h3>
+                <ul class="tags">
+                    <li>.NET MAUI</li><li>XAML</li><li>MVVM</li><li>CommunityToolkit.Mvvm</li>
+                    <li>Shell-navigatie</li><li>Lokale opslag</li><li>REST-services</li><li>Sensoren &amp; camera</li><li>SkiaSharp</li>
+                </ul>
+            </article>
+            <article class="skill-card">
+                <h3>Data</h3>
+                <ul class="tags">
+                    <li>SQL Server</li><li>T-SQL</li><li>Views</li><li>Stored procedures</li>
+                    <li>User-defined functions</li><li>Triggers</li><li>SQL &amp; JSON</li><li>EF-migraties &amp; seeding</li>
+                </ul>
+            </article>
+            <article class="skill-card">
+                <h3>Security &amp; realtime</h3>
+                <ul class="tags">
+                    <li>ASP.NET Identity</li><li>JWT-authenticatie</li><li>Rollen &amp; claims</li>
+                    <li>SignalR</li><li>MQTT</li><li>TCP-sockets</li>
+                </ul>
+            </article>
+            <article class="skill-card">
+                <h3>DevOps &amp; tools</h3>
+                <ul class="tags">
+                    <li>Git &amp; GitHub</li><li>Pull requests</li><li>GitHub Actions (CI/CD)</li><li>Docker</li>
+                    <li>Unit testing (xUnit, TUnit)</li><li>Moq</li><li>Swagger</li><li>Virtualisatie</li><li>Active Directory</li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+    <!-- PROJECTEN -->
+    <section id="projecten">
+        <h2><span class="num">02</span> Uitgelichte projecten</h2>
+
+        <article class="project featured">
+            <div class="project-head">
+                <p class="kicker">Eigen project · draait bij mij thuis</p>
+                <h3>Dobiss MQTT Bridge voor Home Assistant</h3>
+            </div>
+            <p>
+                Een lichtgewicht .NET-service die een <strong>Dobiss-verlichtingssysteem</strong> (AmbiancePRO /
+                EvolutionPRO) via TCP aanstuurt en de status van elke lamp publiceert op een <strong>MQTT-broker</strong>,
+                zodat alles naadloos in <strong>Home Assistant</strong> verschijnt. Daarnaast is er een REST-API om lampen
+                te bekijken, aan/uit te schakelen of te dimmen zonder MQTT. De bridge pollt de status op een instelbaar
+                interval en draait als Docker-container.
+            </p>
+            <ul class="tags small">
+                <li>.NET</li><li>TCP</li><li>MQTT</li><li>SlimMessageBus</li><li>Mediator</li><li>REST API</li>
+                <li>Docker</li><li>TUnit</li><li>Moq</li><li>Shouldly</li><li>GitHub Actions</li>
             </ul>
-        </nav>
-    </header>
+        </article>
 
-    <main>
-        <section>
-            <h2>Welkom bij onze zomerreis naar California!</h2>
-            <p> We beginnen ons avontuur te midden van de zanderige woestijnen van Joshua Tree en Death
-                Valley, waar de landschappen ons zullen betoveren met hun buitengewone schoonheid. Vervolgens
-                doorkruisen we
-                adembenemende canyons zoals de majestueuze Grand Canyon en de betoverende Bryce Canyon, terwijl we onze
-                ogen uitkijken bij elke bocht. Maar dat is nog niet alles - we ontdekken ook de groene oases van Zion en
-                Yosemite National Park, waar de natuur in al haar pracht tot leven komt.</p>
-            <p> Tijdens deze onvergetelijke roadtrip wisselen we af tussen charmante kuststeden zoals het
-                schilderachtige
-                Monterey en het relaxte Pismo Beach, waar de kalme golven ons uitnodigen om te ontspannen. En als we
-                behoefte hebben aan wat stedelijke energie, brengen we tijd door in de bruisende metropolen San
-                Francisco en Los Angeles, waar cultuur, entertainment en culinaire hoogstandjes samenkomen. Met zoveel
-                variatie en schoonheid om van te genieten, belooft deze reis een onvergetelijke ervaring te worden die
-                we nog lang zullen koesteren.</p>
-            <h2 class="center">Hoogtepunten van de reis</h2>            
-        </section>
-        <section id="flex-container">
-            <div><img src="images/grand-canyon.jpg" alt="grand-canyon">
-                <p>De Grand Canyon, één van de zeven natuurlijke wereldwonderen.</p>
-            </div>
-            <div><img src="images/yosemite.jpg" alt="yosemite.jps">
-                <p>Yosemite National Park met zijn indrukwekkende vergezichten.</p>
-            </div>
-            <div><img src="images/golden-gate-bridge.jpg" alt="san-francisco">
-                <p>San Francisco met haar talrijke bezienswaardigheden.</p>
-            </div>
-        <section>
-    </main>
+        <div class="project-grid">
+            <article class="project">
+                <p class="kicker">Mobile Development · 2025 – 2026</p>
+                <h3>BierBalans 🍺</h3>
+                <p>
+                    Een .NET MAUI-app die je bewust maakt van de calorieën in je bier. Scan de barcode, de app zoekt het
+                    product op via Open Food Facts en logt het offline. Een geanimeerd bierglas loopt leeg naarmate je
+                    beweegt, dankzij een echte <strong>Strava-koppeling via OAuth</strong>. Met dagelijkse meldingen,
+                    grafieken van de laatste 14 dagen en schudden-om-te-verversen.
+                </p>
+                <ul class="tags small">
+                    <li>.NET MAUI</li><li>MVVM</li><li>OAuth</li><li>REST</li><li>ZXing</li><li>SkiaSharp</li><li>Microcharts</li><li>xUnit</li>
+                </ul>
+            </article>
 
-    <footer>
-        <p>&copy; Howest Graduaat Programmeren</p>
-    </footer>
+            <article class="project">
+                <p class="kicker">Programming Innovation · examen</p>
+                <h3>LiveSports: wielerkoersen live</h3>
+                <p>
+                    Een Blazor-applicatie om wielerploegen en renners te beheren, een koers op te zetten en die
+                    <strong>realtime</strong> op te volgen. Koersgebeurtenissen worden via <strong>SignalR</strong> live naar
+                    alle kijkers gepusht, met achteraf een rapportering van de wedstrijd.
+                </p>
+                <ul class="tags small">
+                    <li>Blazor</li><li>SignalR</li><li>MudBlazor</li><li>EF Core</li><li>Service layer</li>
+                </ul>
+            </article>
+
+            <article class="project">
+                <p class="kicker">Programming Integration · examen</p>
+                <h3>Webshop: Web API met JWT + client</h3>
+                <p>
+                    Een volledige webshop met producten, merken, categorieën, recepten, een winkelmandje en bestellingen.
+                    Een ASP.NET Core <strong>Web API</strong> met DTO's en <strong>JWT-authenticatie</strong>, plus een aparte
+                    web-client die de API aanspreekt. Opgesplitst in Core-, API- en App-projecten.
+                </p>
+                <ul class="tags small">
+                    <li>ASP.NET Core Web API</li><li>JWT</li><li>Identity</li><li>EF Core</li><li>Razor Pages</li><li>Swagger</li>
+                </ul>
+            </article>
+
+            <article class="project">
+                <p class="kicker">Groepswerk · Team Penguin</p>
+                <h3>Digital Health Lab</h3>
+                <p>
+                    Een MVC-webapplicatie waarmee gezondheidsapps beoordeeld worden aan de hand van
+                    inclusie- en kwaliteitscriteria (scores van 1 tot 5), ingedeeld per thema, categorie en tag. Met
+                    rollen voor admins en docenten, en statistieken over de screenings.
+                </p>
+                <ul class="tags small">
+                    <li>ASP.NET Core MVC</li><li>Identity</li><li>EF Core</li><li>Seeding</li><li>Scrum</li>
+                </ul>
+            </article>
+
+            <article class="project">
+                <p class="kicker">Workplace Experience · Team Dodo</p>
+                <h3>TWEG-platform v2</h3>
+                <p>
+                    Een teamproject in Scrum-sprints voor een echte opdrachtgever: het TWEG-platform voor
+                    leidinggevenden. We vertrekken van twee bestaande v1-projecten (Web API + .NET MAUI) en bouwen
+                    een web-based admin dashboard, met feature branches, code reviews en retrospectives.
+                </p>
+                <ul class="tags small">
+                    <li>ASP.NET Core</li><li>.NET MAUI</li><li>User stories</li><li>Pull requests</li><li>GitHub Projects</li>
+                </ul>
+            </article>
+        </div>
+
+        <details class="more">
+            <summary>Meer oefenprojecten uit de lessen</summary>
+            <ul class="more-list">
+                <li><strong>Blazor shopping cart</strong>: winkelmandje in Blazor</li>
+                <li><strong>ArticleManager</strong>: Blazor-front-end met gedeelde modellen en een Web API</li>
+                <li><strong>RateACourse</strong>: Identity in ASP.NET Core MVC</li>
+                <li><strong>Movies</strong>: service pattern met EF Core en relaties</li>
+                <li><strong>Art gallery</strong>: web-back-end lesproject</li>
+                <li><strong>Zoo manager</strong>: JavaScript-app met JSON-data</li>
+                <li><strong>Mood Tracker &amp; Flags</strong>: MAUI-apps met eigen Web API</li>
+                <li><strong>Student Roulette</strong>: MVVM in .NET MAUI</li>
+                <li><strong>QR-generator &amp; navigatie</strong>: MAUI-basis, NavStack, Shell met flyout en tabbar</li>
+                <li><strong>Battlefield, Savannah, TV Shop, Garden Tools</strong>: OOP en interfaces in C#</li>
+                <li><strong>Heroes</strong>: HTML/CSS-website met flexbox en formulieren</li>
+            </ul>
+        </details>
+    </section>
+
+    <!-- OPLEIDING -->
+    <section id="opleiding">
+        <h2><span class="num">03</span> Opleiding</h2>
+        <p class="section-intro">Graduaat Programmeren aan <strong>Howest</strong>, een opleiding van drie jaar.</p>
+        <ol class="timeline">
+            <li>
+                <span class="year">2023 – 2024</span>
+                <h3>De fundamenten</h3>
+                <ul class="tags small">
+                    <li>Programming basics</li><li>Programming advanced</li><li>Web frontend basics</li>
+                    <li>Web frontend advanced</li><li>Databases</li><li>Continuous integration basics</li><li>BIT / virtualisatie</li>
+                </ul>
+                <p>C# en objectgeoriënteerd programmeren (klassen, overerving, interfaces), HTML/CSS/JavaScript, SQL Server en T-SQL, en de eerste stappen met Git en CI.</p>
+            </li>
+            <li>
+                <span class="year">2024 – 2025</span>
+                <h3>Web &amp; integratie</h3>
+                <ul class="tags small">
+                    <li>Web backend</li><li>Programming expert</li><li>Programming integration</li>
+                    <li>Programming innovation</li><li>Continuous integration advanced</li><li>Advanced IT skills</li><li>Workplace simulation</li>
+                </ul>
+                <p>ASP.NET Core MVC en Web API, Entity Framework, Identity en JWT, Blazor en SignalR, LINQ, delegates, generics en klassendiagrammen, GitHub Actions en een eerste gesimuleerde werkplekervaring.</p>
+            </li>
+            <li>
+                <span class="year">2025 – 2026</span>
+                <h3>Mobile &amp; werkplek</h3>
+                <ul class="tags small">
+                    <li>Mobile development</li><li>Workplace experience I</li>
+                </ul>
+                <p>Cross-platform apps met .NET MAUI en MVVM, en een Scrum-teamproject voor een echte opdrachtgever.</p>
+            </li>
+        </ol>
+    </section>
+
+    <!-- WERKWIJZE -->
+    <section id="werkwijze">
+        <h2><span class="num">04</span> Hoe ik werk</h2>
+        <div class="way-grid">
+            <div><h3>Gelaagde architectuur</h3><p>Ik splits projecten op in Core-, API- en client-lagen, met services achter interfaces en dependency injection.</p></div>
+            <div><h3>Samenwerken in Scrum</h3><p>Sprints, user stories, feature branches, pull requests met reviews en eerlijke retrospectives.</p></div>
+            <div><h3>Automatiseren</h3><p>Builds en tests via GitHub Actions, en services die als Docker-container draaien.</p></div>
+            <div><h3>Testen</h3><p>Unit tests met xUnit en TUnit, met Moq om afhankelijkheden te simuleren.</p></div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+        <h2><span class="num">05</span> Contact</h2>
+        <p>Op zoek naar een gemotiveerde .NET-developer voor een stage of job? Laat gerust iets weten.</p>
+        <div class="hero-actions">
+            <a class="btn primary" href="https://github.com/BenjaminDesmet" target="_blank" rel="noopener">GitHub-profiel</a>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Benjamin Desmet · Graduaat Programmeren, Howest · <a href="reis/index.html">Mijn reis naar California</a></p>
+</footer>
+
 </body>
-
 </html>
